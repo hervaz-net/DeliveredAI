@@ -1,0 +1,120 @@
+/* Design directions. Each overrides the tokens in styles.css; pick one with ?theme=<id>. */
+
+/* 2. Freight: industrial charcoal + safety orange, square and loud */
+[data-theme='freight'] {
+  --brand: #16171a; --brand-2: #ff5a1f; --accent: #ff5a1f; --accent-ink: #ffffff;
+  --ink: #16171a; --muted: #5d6066; --line: #dcdcd8; --bg: #efeee9; --surface-2: #f4f3ef; --selected-bg: #fff1ea;
+  --hero-bg: #16171a; --hero-pattern: repeating-linear-gradient(-45deg, transparent 0 22px, rgba(255, 90, 31, 0.07) 22px 44px);
+  --hero-muted: #b7b8bb; --topbar-bg: #16171a; --topbar-muted: #b7b8bb; --on-brand-muted: #b7b8bb;
+  --focus: rgba(255, 90, 31, 0.3); --accent-glow: rgba(255, 90, 31, 0.3); --logo-accent: #ff5a1f;
+  --radius: 2px; --radius-sm: 2px; --shadow: none; --card-border: 2px solid #16171a;
+  --font-body: 'Archivo', system-ui, sans-serif; --font-head: 'Archivo Black', 'Archivo', sans-serif;
+  --head-weight: 400; --head-tracking: -0.01em; --head-transform: uppercase; --btn-transform: uppercase; --btn-weight: 800;
+}
+
+/* 3. Mint: bright, friendly SaaS, very round */
+[data-theme='mint'] {
+  --brand: #0e9f6e; --brand-2: #0b8a5f; --accent: #0e9f6e; --accent-ink: #ffffff;
+  --ink: #0f1f1a; --muted: #5b6b66; --line: #e2ece8; --bg: #f7fbf9; --surface-2: #f0f8f4; --selected-bg: #e7f7f0;
+  --topbar-bg: #ffffff; --topbar-ink: #0f1f1a; --topbar-muted: #4c5c57; --topbar-border: #e2ece8;
+  --hero-bg: radial-gradient(900px 420px at 90% 0%, #c9f3e2 0%, transparent 60%), radial-gradient(700px 380px at 0% 100%, #e5fbf2 0%, transparent 60%), #f7fbf9;
+  --hero-ink: #0f1f1a; --hero-muted: #4c5c57; --hero-accent: #0e9f6e; --logo-accent: #0e9f6e;
+  --focus: rgba(14, 159, 110, 0.25); --accent-glow: rgba(14, 159, 110, 0.25);
+  --radius: 22px; --radius-sm: 999px; --shadow: 0 10px 30px rgba(14, 80, 60, 0.08);
+  --font-body: 'Plus Jakarta Sans', system-ui, sans-serif; --head-weight: 800; --head-tracking: -0.03em;
+}
+
+/* 4. Blueprint: engineering grid, monospace headings */
+[data-theme='blueprint'] {
+  --brand: #0d3b8c; --brand-2: #1d5fd6; --accent: #ffd23f; --accent-ink: #0d1b33;
+  --ink: #0d1b33; --muted: #4f5d78; --line: #d5deef; --bg: #f2f5fb; --surface-2: #edf2fb; --selected-bg: #e6eefc;
+  --hero-bg: #0d3b8c; --topbar-bg: #0a2f70; --topbar-muted: #b9cbf0; --hero-muted: #c3d3f3; --on-brand-muted: #c3d3f3;
+  --hero-pattern: linear-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px) 0 0 / 28px 28px, linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px) 0 0 / 28px 28px;
+  --radius: 6px; --radius-sm: 4px; --shadow: 0 1px 0 #d5deef; --card-border: 1px solid #c7d3ea;
+  --font-body: 'IBM Plex Sans', system-ui, sans-serif; --font-head: 'IBM Plex Mono', monospace;
+  --head-weight: 600; --head-tracking: -0.02em;
+}
+
+/* 5. Editorial: black and white, serif headlines, lots of air */
+[data-theme='editorial'] {
+  --brand: #111111; --brand-2: #111111; --accent: #111111; --accent-ink: #ffffff;
+  --ink: #111111; --muted: #6b6b6b; --line: #e6e6e6; --bg: #ffffff; --surface-2: #f6f6f4; --selected-bg: #f3f3f1; --icon-muted: #b5b5b5;
+  --topbar-bg: #ffffff; --topbar-ink: #111111; --topbar-muted: #6b6b6b; --topbar-border: #e6e6e6;
+  --hero-bg: #f6f6f4; --hero-ink: #111111; --hero-muted: #555555; --hero-accent: #111111; --logo-accent: #111111;
+  --focus: rgba(0, 0, 0, 0.15); --accent-glow: rgba(0, 0, 0, 0.12);
+  --radius: 0; --radius-sm: 0; --shadow: none;
+  --font-body: 'Inter', system-ui, sans-serif; --font-head: 'Instrument Serif', Georgia, serif;
+  --head-weight: 400; --head-tracking: -0.01em;
+}
+[data-theme='editorial'] .hero h1 { font-size: clamp(2.8rem, 6vw, 4.4rem); }
+
+/* 6. Sunset: warm cream, coral, friendly serif */
+[data-theme='sunset'] {
+  --brand: #2a1a1f; --brand-2: #e8553e; --accent: #ffb547; --accent-ink: #2a1a1f;
+  --ink: #2a1a1f; --muted: #75636a; --line: #efe2d8; --bg: #fdf6ef; --card: #fffdfa; --surface: #fffdfa; --surface-2: #fbefe5; --selected-bg: #fdebe4;
+  --topbar-bg: #fdf6ef; --topbar-ink: #2a1a1f; --topbar-muted: #75636a; --topbar-border: #efe2d8;
+  --hero-bg: linear-gradient(135deg, #e8553e 0%, #f08a4b 55%, #ffb547 100%); --hero-muted: #fff0e4; --hero-accent: #2a1a1f; --logo-accent: #e8553e;
+  --focus: rgba(232, 85, 62, 0.25); --accent-glow: rgba(255, 181, 71, 0.4);
+  --radius: 18px; --radius-sm: 12px; --shadow: 0 8px 28px rgba(120, 60, 30, 0.08);
+  --font-body: 'DM Sans', system-ui, sans-serif; --font-head: 'DM Serif Display', Georgia, serif;
+  --head-weight: 400; --head-tracking: -0.01em;
+}
+
+/* 7. Neon: dark mode, violet to cyan, AI-forward */
+[data-theme='neon'] {
+  --brand: #7c5cff; --brand-2: #a28bff; --accent: #2de2e6; --accent-ink: #061018;
+  --ink: #e9e9f4; --muted: #9a9bb5; --line: #262842; --bg: #0b0c18; --card: #13142a; --surface: #181a33; --surface-2: #1c1e3a; --selected-bg: #221f4a;
+  --icon-muted: #5e6088; --knob-off: #34365a;
+  --topbar-bg: rgba(11, 12, 24, 0.85); --topbar-muted: #a9aac6; --topbar-border: #1f2140;
+  --hero-bg: radial-gradient(900px 500px at 80% 0%, rgba(124, 92, 255, 0.45) 0%, transparent 60%), radial-gradient(700px 400px at 10% 100%, rgba(45, 226, 230, 0.2) 0%, transparent 60%), #0b0c18;
+  --hero-muted: #b5b6d3; --on-brand-muted: #e3dcff; --logo-accent: #2de2e6;
+  --focus: rgba(124, 92, 255, 0.45); --accent-glow: rgba(45, 226, 230, 0.35);
+  --radius: 16px; --radius-sm: 10px; --shadow: 0 0 0 1px rgba(124, 92, 255, 0.12), 0 10px 40px rgba(0, 0, 0, 0.4);
+  --font-body: 'Space Grotesk', system-ui, sans-serif; --head-weight: 700; --head-tracking: -0.03em;
+}
+[data-theme='neon'] .btn-primary { background: linear-gradient(90deg, #7c5cff, #2de2e6); color: #061018; }
+[data-theme='neon'] .hero .quote-card { color: var(--ink); }
+[data-theme='neon'] .alert-error { background: #3a1420; color: #ffb3c1; border-color: #5c1f30; }
+[data-theme='neon'] .alert-ok { background: #0f2e22; color: #9df0c4; border-color: #1b4d38; }
+
+/* 8. Hi-Vis: construction yellow, condensed type */
+[data-theme='hivis'] {
+  --brand: #111111; --brand-2: #111111; --accent: #ffd400; --accent-ink: #111111;
+  --ink: #111111; --muted: #5a5a52; --line: #e3e0cf; --bg: #fafaf5; --surface-2: #f6f4e6; --selected-bg: #fff6b8; --icon-muted: #a6a391;
+  --topbar-bg: #111111; --topbar-muted: #d4d4cc; --logo-accent: #ffd400;
+  --hero-bg: #ffd400; --hero-ink: #111111; --hero-muted: #3a3a32; --hero-accent: #111111;
+  --hero-pattern: linear-gradient(transparent calc(100% - 14px), #111 calc(100% - 14px)), repeating-linear-gradient(-45deg, transparent 0 18px, rgba(0, 0, 0, 0.9) 18px 36px) bottom / 100% 14px no-repeat;
+  --focus: rgba(17, 17, 17, 0.25); --accent-glow: rgba(255, 212, 0, 0.6);
+  --radius: 4px; --radius-sm: 4px; --shadow: 4px 4px 0 #111; --card-border: 2px solid #111;
+  --font-body: 'Barlow', system-ui, sans-serif; --font-head: 'Barlow Condensed', 'Barlow', sans-serif;
+  --head-weight: 800; --head-tracking: 0; --head-transform: uppercase; --btn-transform: uppercase; --btn-weight: 700;
+}
+[data-theme='hivis'] .hero .btn-accent { background: #111; color: #ffd400; }
+[data-theme='hivis'] .hero h1 { font-size: clamp(2.8rem, 6vw, 4.6rem); }
+
+/* 9. Forest: deep green and sand, calm premium */
+[data-theme='forest'] {
+  --brand: #1f3d2b; --brand-2: #2f6b47; --accent: #e9c46a; --accent-ink: #1f2a1a;
+  --ink: #1d2a22; --muted: #66726a; --line: #e4dfd2; --bg: #f6f2e9; --card: #fffdf8; --surface: #fffdf8; --surface-2: #f3eee2; --selected-bg: #eef3ec;
+  --topbar-bg: #1f3d2b; --topbar-muted: #c9d6cd; --hero-bg: linear-gradient(160deg, #1f3d2b 0%, #2c5a3e 100%); --hero-muted: #cfdcd3; --on-brand-muted: #cfdcd3;
+  --focus: rgba(47, 107, 71, 0.25); --accent-glow: rgba(233, 196, 106, 0.45);
+  --radius: 12px; --radius-sm: 8px; --shadow: 0 4px 18px rgba(31, 61, 43, 0.07);
+  --font-body: 'Manrope', system-ui, sans-serif; --font-head: 'Fraunces', Georgia, serif; --head-weight: 600; --head-tracking: -0.02em;
+}
+
+/* 10. Ocean: teal gradient and frosted glass */
+[data-theme='ocean'] {
+  --brand: #0a6c8f; --brand-2: #0891b2; --accent: #ffffff; --accent-ink: #075e7a;
+  --ink: #0b2530; --muted: #577482; --line: #d9eaf0; --bg: #f1f8fb; --surface-2: #eaf5f9; --selected-bg: #e0f3f9;
+  --topbar-bg: rgba(255, 255, 255, 0.85); --topbar-ink: #0b2530; --topbar-muted: #46626e; --topbar-border: #d9eaf0;
+  --hero-bg: linear-gradient(120deg, #0a6c8f 0%, #0891b2 45%, #22c3c9 100%); --hero-muted: #d8f3fa; --logo-accent: #0891b2;
+  --hero-pattern: radial-gradient(circle at 15% 30%, rgba(255, 255, 255, 0.18) 0 120px, transparent 121px), radial-gradient(circle at 70% 110%, rgba(255, 255, 255, 0.12) 0 220px, transparent 221px);
+  --focus: rgba(8, 145, 178, 0.3); --accent-glow: rgba(8, 145, 178, 0.35);
+  --radius: 20px; --radius-sm: 12px; --shadow: 0 12px 40px rgba(8, 80, 110, 0.1);
+  --font-body: 'Outfit', system-ui, sans-serif; --head-weight: 600; --head-tracking: -0.02em;
+}
+[data-theme='ocean'] .hero .quote-card { background: rgba(255, 255, 255, 0.92); backdrop-filter: blur(12px); }
+[data-theme='ocean'] .hero .btn-accent { color: #075e7a; }
+[data-theme='ocean'] .topbar .btn-accent { background: var(--brand-2); color: #fff; }
+[data-theme='neon'] .proof { background: #0f2e22; }
+[data-theme='neon'] .stop .note { background: #2e2814; }
